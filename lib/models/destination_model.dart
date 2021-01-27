@@ -1,6 +1,6 @@
 import 'package:hello_word_android_studio/models/activity_model.dart';
 
-class Destination{
+class Destination {
   String imageUrl;
   String city;
   String country;
@@ -13,7 +13,7 @@ class Destination{
     this.country,
     this.description,
     this.activities,
-});
+  });
 }
 
 List<Activity> activities = [
@@ -23,23 +23,23 @@ List<Activity> activities = [
     type: 'Kirandulas',
     startTimes: ['9:00 am', '11:00 am'],
     rating: 5,
-    price: 30,
+    price: 3200,
   ),
   Activity(
     imageUrl: 'assets/images/kep2.jpg',
     name: 'Tevekenyseg2',
     type: 'Kirandulas',
-    startTimes: ['9:00 am', '11:00 am'],
+    startTimes: ['10:00 am', '11:00 am'],
     rating: 4,
-    price: 24,
+    price: 2400,
   ),
   Activity(
     imageUrl: 'assets/images/kep3.jpg',
     name: 'Tevekenyseg3',
     type: 'Kirandulas',
-    startTimes: ['9:00 am', '11:00 am'],
+    startTimes: ['19:00 am', '20:00 am'],
     rating: 3,
-    price: 30,
+    price: 3000,
   ),
 ];
 

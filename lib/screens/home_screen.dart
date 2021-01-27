@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hello_word_android_studio/models/destination_model.dart';
+import 'package:hello_word_android_studio/screens/profile_screen.dart';
+import 'package:hello_word_android_studio/screens/profile_page.dart';
 import 'package:hello_word_android_studio/widgets/destination_carousel.dart';
+import 'package:hello_word_android_studio/widgets/hotel_carousel.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -10,7 +13,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-
+  int _currentTab = 0;
   List<IconData> _icons = [
     FontAwesomeIcons.plane,
     FontAwesomeIcons.bed,
@@ -77,8 +80,50 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 20.0,
             ),
             DestinationCarousel(),
+            SizedBox(
+              height: 20.0,
+            ),
+            HotelCarousel(),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentTab,
+        onTap: (int value) {
+          setState(() {
+            _currentTab = value;
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.search,
+              size: 30.0,
+            ),
+            title: SizedBox.shrink(),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.map_outlined,
+              size: 30.0,
+            ),
+            title: SizedBox.shrink(),
+          ),
+          BottomNavigationBarItem(
+            icon: IconButton(
+              icon: Icon(Icons.portrait),
+              iconSize: 30.0,
+              color: Colors.black,
+              onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ProfilePage(
+                            profile: profile,
+                          ))),
+            ),
+            title: SizedBox.shrink(),
+          )
+        ],
       ),
     );
   }
