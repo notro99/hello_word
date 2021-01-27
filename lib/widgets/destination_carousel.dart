@@ -47,33 +47,36 @@ class DestinationCarousel extends StatelessWidget {
                   child: Stack(
                     alignment: Alignment.topCenter,
                     children: <Widget>[
-                      Container(
-                        height: 120.0,
-                        width: 200.0,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0)),
-                        child: Padding(
-                            padding: EdgeInsets.all(10.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  '${destination.activities.length} activities',
-                                  style: TextStyle(
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.w600,
-                                    letterSpacing: 1.2,
+                      Positioned(
+                        bottom: 15.0,
+                        child: Container(
+                          height: 120.0,
+                          width: 210.0,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0)),
+                          child: Padding(
+                              padding: EdgeInsets.all(10.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    '${destination.activities.length} activities',
+                                    style: TextStyle(
+                                      fontSize: 22.0,
+                                      fontWeight: FontWeight.w600,
+                                      letterSpacing: 1.2,
+                                    ),
                                   ),
-                                ),
-                                Text(
-                                  destination.description,
-                                  style: TextStyle(
-                                    color: Colors.grey,
+                                  Text(
+                                    destination.description,
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                    ),
                                   ),
-                                ),
-                              ],
-                            )),
+                                ],
+                              )),
+                        ),
                       ),
                       Container(
                           decoration: BoxDecoration(
@@ -96,6 +99,12 @@ class DestinationCarousel extends StatelessWidget {
                                     image: AssetImage(destination.imageUrl),
                                     fit: BoxFit.cover,
                                   )),
+                              Column(
+                                children: <Widget>[
+                                  Text(destination.city),
+                                  Text(destination.country),
+                                ],
+                              )
                             ],
                           )),
                     ],
