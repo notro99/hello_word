@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hello_word_android_studio/models/destination_model.dart';
+import 'package:hello_word_android_studio/screens/all_destinations.dart';
 import 'package:hello_word_android_studio/screens/destination_screen.dart';
 
 class DestinationCarousel extends StatelessWidget {
@@ -21,7 +22,12 @@ class DestinationCarousel extends StatelessWidget {
                     letterSpacing: 1.5),
               ),
               GestureDetector(
-                //onTap: (),                                      //osszes hely listazasa
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => AllDestinationScreen(),
+                  ),
+                ), //osszes hely listazasa
                 child: Text(
                   'Osszes',
                   style: TextStyle(

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hello_word_android_studio/screens/page3_screen.dart';
+import 'package:hello_word_android_studio/screens/map.dart';
 
 import 'package:hello_word_android_studio/screens/profile/page2_screen.dart';
 
-import 'package:hello_word_android_studio/screens/profile_screen.dart';
-import 'package:hello_word_android_studio/screens/profile_page.dart';
 import 'package:hello_word_android_studio/widgets/destination_carousel.dart';
 import 'package:hello_word_android_studio/widgets/hotel_carousel.dart';
 
