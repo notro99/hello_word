@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hello_word_android_studio/screens/page3_screen.dart';
+
 import 'package:hello_word_android_studio/screens/profile/page2_screen.dart';
 
 import 'package:hello_word_android_studio/screens/profile_screen.dart';
@@ -107,10 +109,14 @@ class _HomeScreenState extends State<HomeScreen> {
             title: SizedBox.shrink(),
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.map_outlined,
-              size: 30.0,
-            ),
+            icon: IconButton(
+                icon: Icon(Icons.map),
+                iconSize: 30.0,
+                color: Colors.black,
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => GMap()));
+                }),
             title: SizedBox.shrink(),
           ),
           BottomNavigationBarItem(
