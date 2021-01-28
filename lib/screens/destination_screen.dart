@@ -176,7 +176,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                                       ),
                                     ),
                                     Text(
-                                      '/ fo',
+                                      '/ fő',
                                       style: TextStyle(
                                         color: Colors.grey,
                                       ),

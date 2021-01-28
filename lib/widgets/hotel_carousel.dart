@@ -22,18 +22,6 @@ class HotelCarousel extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1.5),
               ),
-              GestureDetector(
-                //onTap: (),                                      //osszes hely listazasa
-                child: Text(
-                  'Osszes',
-                  style: TextStyle(
-                    color: Theme.of(context).primaryColor,
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 1.0,
-                  ),
-                ),
-              ),
             ],
           ),
         ),
@@ -83,7 +71,7 @@ class HotelCarousel extends StatelessWidget {
                                     height: 2.0,
                                   ),
                                   Text(
-                                    'HUF ${hotel.price} / ejszaka',
+                                    'HUF ${hotel.price} / éjszaka',
                                     style: TextStyle(
                                       fontSize: 18.0,
                                       fontWeight: FontWeight.w600,

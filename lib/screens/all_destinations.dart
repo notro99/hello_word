@@ -33,22 +33,64 @@ List<Activity> activities = [
 List<Destination> alldestinations = [
   Destination(
     imageUrl: 'assets/images/varos1.jpg',
-    city: 'Varos1',
-    country: 'Magyarorszag',
+    city: 'Szeged',
+    country: 'Magyarország',
     description: 'Latogass el ide',
     activities: activities,
   ),
   Destination(
     imageUrl: 'assets/images/varos2.jpg',
-    city: 'Varos2',
-    country: 'Magyarorszag',
+    city: 'Békéscsaba',
+    country: 'Magyarország',
     description: 'Latogass el ide',
     activities: activities,
   ),
   Destination(
     imageUrl: 'assets/images/varos3.jpg',
-    city: 'Varos3',
-    country: 'Magyarorszag',
+    city: 'Pécs',
+    country: 'Magyarország',
+    description: 'Latogass el ide',
+    activities: activities,
+  ),
+  Destination(
+    imageUrl: 'assets/images/varos4.jpg',
+    city: 'Gyula',
+    country: 'Magyarország',
+    description: 'Latogass el ide',
+    activities: activities,
+  ),
+  Destination(
+    imageUrl: 'assets/images/varos5.jpg',
+    city: 'Sopron',
+    country: 'Magyarország',
+    description: 'Latogass el ide',
+    activities: activities,
+  ),
+  Destination(
+    imageUrl: 'assets/images/varos6.jpg',
+    city: 'Budapest',
+    country: 'Magyarország',
+    description: 'Latogass el ide',
+    activities: activities,
+  ),
+  Destination(
+    imageUrl: 'assets/images/varos7.jpg',
+    city: 'Bécs',
+    country: 'Ausztria',
+    description: 'Latogass el ide',
+    activities: activities,
+  ),
+  Destination(
+    imageUrl: 'assets/images/varos8.jpg',
+    city: 'Szejkefürdő',
+    country: 'Románia',
+    description: 'Latogass el ide',
+    activities: activities,
+  ),
+  Destination(
+    imageUrl: 'assets/images/varos9.jpg',
+    city: 'Pozsony',
+    country: 'Szlovákia',
     description: 'Latogass el ide',
     activities: activities,
   )
@@ -95,7 +137,7 @@ class _DestinationScreenState extends State<AllDestinationScreen> {
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(100.0, 20.0, 20.0, 20.0),
+                        padding: EdgeInsets.fromLTRB(140.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -147,7 +189,7 @@ class _DestinationScreenState extends State<AllDestinationScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image(
-                          width: 110.0,
+                          width: 150.0,
                           image: AssetImage(
                             destination.imageUrl,
                           ),

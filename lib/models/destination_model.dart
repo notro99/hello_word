@@ -16,11 +16,11 @@ class Destination {
   });
 }
 
-List<Activity> activities = [
+List<Activity> activitiesBudapest = [
   Activity(
     imageUrl: 'assets/images/kep1.jpg',
-    name: 'Tevekenyseg1',
-    type: 'Kirandulas',
+    name: 'Kirándulás',
+    type: 'Gellérthegy',
     startTimes: ['9:00 ', '11:00 '],
     rating: 5,
     price: 3200,
@@ -43,26 +43,98 @@ List<Activity> activities = [
   ),
 ];
 
+List<Activity> activitiesSzeged = [
+  Activity(
+    imageUrl: 'assets/images/borfesztival.jpg',
+    name: 'Borfesztivál',
+    type: 'Kultúra',
+    startTimes: ['9:00 ', '11:00 '],
+    rating: 5,
+    price: 3200,
+  ),
+  Activity(
+    imageUrl: 'assets/images/muzeum.jpg',
+    name: 'Múzeum látogatás',
+    type: 'Kultúra',
+    startTimes: ['10:00 ', '11:00 '],
+    rating: 4,
+    price: 2400,
+  ),
+  Activity(
+    imageUrl: 'assets/images/pick.jpg',
+    name: 'Kézilabda',
+    type: 'Sport',
+    startTimes: ['19:00 ', '20:00 '],
+    rating: 3,
+    price: 3000,
+  ),
+];
+
+List<Activity> activitiesBecs = [
+  Activity(
+    imageUrl: 'assets/images/karacsonyivasar.jpg',
+    name: 'Vásár',
+    type: 'Kikapcsolódás',
+    startTimes: ['10:00 ', '11:00 '],
+    rating: 5,
+    price: 3200,
+  ),
+  Activity(
+    imageUrl: 'assets/images/varosnezes.jpg',
+    name: 'Városnézés',
+    type: 'Kultúra',
+    startTimes: ['10:00 ', '11:00 '],
+    rating: 4,
+    price: 2400,
+  ),
+];
+
+List<Activity> activitiesErdely = [
+  Activity(
+    imageUrl: 'assets/images/erdely1.jpg',
+    name: 'Túra',
+    type: 'Kirándulás',
+    startTimes: ['9:00 ', '11:00 '],
+    rating: 5,
+    price: 3200,
+  ),
+  Activity(
+    imageUrl: 'assets/images/erdely2.jpg',
+    name: 'Túra',
+    type: 'Kirándulás',
+    startTimes: ['10:00 ', '11:00 '],
+    rating: 4,
+    price: 2400,
+  ),
+];
+
 List<Destination> destinations = [
   Destination(
     imageUrl: 'assets/images/varos1.jpg',
-    city: 'Varos1',
-    country: 'Magyarorszag',
+    city: 'Szeged',
+    country: 'Magyarország',
     description: 'Latogass el ide',
-    activities: activities,
+    activities: activitiesSzeged,
   ),
   Destination(
-    imageUrl: 'assets/images/varos2.jpg',
-    city: 'Varos2',
-    country: 'Magyarorszag',
+    imageUrl: 'assets/images/varos6.jpg',
+    city: 'Budapest',
+    country: 'Magyarország',
     description: 'Latogass el ide',
-    activities: activities,
+    activities: activitiesBudapest,
   ),
   Destination(
-    imageUrl: 'assets/images/varos3.jpg',
-    city: 'Varos3',
-    country: 'Magyarorszag',
+    imageUrl: 'assets/images/varos7.jpg',
+    city: 'Bécs',
+    country: 'Ausztria',
     description: 'Latogass el ide',
-    activities: activities,
-  )
+    activities: activitiesBecs,
+  ),
+  Destination(
+    imageUrl: 'assets/images/varos8.jpg',
+    city: 'Szejkefürdő',
+    country: 'Románia',
+    description: 'Latogass el ide',
+    activities: activitiesErdely,
+  ),
 ];
