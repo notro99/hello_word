@@ -38,23 +38,27 @@ class _ProfilePageState extends State<Page2> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return Center(
       child: Scaffold(
-        body: Container(
-          padding: EdgeInsets.all(8),
-          decoration: BoxDecoration(
-            color: Colors.grey[200],
-          ),
-          child: Column(
-            children: <Widget>[
-              ProfilePicture(),
-              if (_profile != null)
-                Expanded(
-                    child: ProfileForm(
-                  profile: _profile,
-                )),
-            ],
-          ),
+        body: Stack(
+          children: <Widget>[
+            //ProfilePicture(),
+            CircleAvatar(
+              radius: 80.0,
+              backgroundImage: AssetImage('assets/images/profile.jpg'),
+            ),
+            Positioned(
+              bottom: 15.0,
+              right: 20.0,
+              child: Icon(Icons.camera_alt, color: Colors.black, size: 28.0),
+            )
+
+            //if (_profile != null)
+            //  Expanded(
+            //      child: ProfileForm(
+            //    profile: _profile,
+            // )),
+          ],
         ),
         floatingActionButton: AddAddressButton(
           onAddressSaved: _loadProfile,

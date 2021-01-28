@@ -43,6 +43,43 @@ class _ProfileFormState extends State<ProfileForm> {
       );
   }
 
+  Widget bottomSheet() {
+    return Container(
+        height: 100.0,
+        width: MediaQuery.of(context).size.width,
+        margin: EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 20,
+        ),
+        child: Column(
+          children: <Widget>[
+            Text(
+              "Válassz képet",
+              style: TextStyle(
+                fontSize: 20.0,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: <Widget>[
+                FlatButton.icon(
+                  icon: Icon(Icons.camera),
+                  onPressed: () {},
+                  label: Text("Kamera"),
+                ),
+                FlatButton.icon(
+                  icon: Icon(Icons.image),
+                  onPressed: () {},
+                  label: Text("Galéria"),
+                )
+              ],
+            )
+          ],
+        ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
