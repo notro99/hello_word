@@ -5,10 +5,12 @@ import 'package:hello_word_android_studio/screens/profile/profile_form.dart';
 import 'package:hello_word_android_studio/screens/profile/profile_picture.dart';
 
 class ProfilePage extends StatefulWidget {
-  final ProfilePage profile;
+  final void Function() onShowCart;
 
-  ProfilePage({this.profile});
-
+  const ProfilePage({
+    Key key,
+    this.onShowCart,
+  }) : super(key: key);
   @override
   _ProfilePageState createState() => _ProfilePageState();
 }

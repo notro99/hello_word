@@ -18,7 +18,7 @@ class _AddressFormDialogState extends State<AddressFormDialog> {
     // Creates a dialog
     return SimpleDialog(
       title: Container(
-        child: Text(AppLocalizations.of(context).addAddressDialogTitle),
+        child: Text('Uj cim felvetele'),
         alignment: Alignment.center,
       ),
       contentPadding: EdgeInsets.all(10),
@@ -30,11 +30,11 @@ class _AddressFormDialogState extends State<AddressFormDialog> {
               TextFormField(
                 controller: _cityController,
                 decoration: InputDecoration(
-                  labelText: AppLocalizations.of(context).city,
+                  labelText: 'Varos',
                 ),
                 validator: (value) {
                   if (value.isEmpty) {
-                    return AppLocalizations.of(context).mandatoryField;
+                    return 'Kotelezo';
                   }
                   return null;
                 },
@@ -42,11 +42,11 @@ class _AddressFormDialogState extends State<AddressFormDialog> {
               TextFormField(
                 controller: _streetController,
                 decoration: InputDecoration(
-                  labelText: AppLocalizations.of(context).street,
+                  labelText: 'Utca',
                 ),
                 validator: (value) {
                   if (value.isEmpty) {
-                    return AppLocalizations.of(context).mandatoryField;
+                    return 'Kotelezo';
                   }
                   return null;
                 },
@@ -54,12 +54,12 @@ class _AddressFormDialogState extends State<AddressFormDialog> {
               TextFormField(
                 controller: _houseNumberController,
                 decoration: InputDecoration(
-                  labelText: AppLocalizations.of(context).houseNumber,
+                  labelText: 'Hazszam',
                 ),
                 cursorColor: Colors.red,
                 validator: (value) {
                   if (value.isEmpty) {
-                    return AppLocalizations.of(context).mandatoryField;
+                    return 'Kotelezo';
                   }
                   return null;
                 },
@@ -72,7 +72,7 @@ class _AddressFormDialogState extends State<AddressFormDialog> {
                       Navigator.of(context).pop();
                     },
                     textColor: Colors.red[200],
-                    child: Text(AppLocalizations.of(context).cancel),
+                    child: Text('Megse'),
                   ),
                   FlatButton(
                     onPressed: () {
@@ -86,7 +86,7 @@ class _AddressFormDialogState extends State<AddressFormDialog> {
                       }
                     },
                     textColor: Colors.red,
-                    child: Text(AppLocalizations.of(context).save),
+                    child: Text('Mentes'),
                   ),
                 ],
               ),

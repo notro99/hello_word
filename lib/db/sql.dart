@@ -1,6 +1,7 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite/sqlite_api.dart';
+import 'dart:async';
 
 class Sql {
   Database _database;
@@ -22,7 +23,7 @@ class Sql {
           name TEXT,
           email TEXT,
           phone TEXT
-        );
+        ); INSERT INTO profile (id,name,email,phone)VALUES(1,'Nev','email@email.com',);
         ''');
         await db.execute('''
         CREATE TABLE addresses(

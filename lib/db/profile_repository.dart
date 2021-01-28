@@ -1,10 +1,9 @@
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:hello_word_android_studio/db/sql.dart';
+import 'package:hello_word_android_studio/location_service.dart';
 import 'package:hello_word_android_studio/models/address.dart';
 import 'package:hello_word_android_studio/models/profile.dart';
 import 'package:sqflite/sqlite_api.dart';
-
-import '../location_service.dart';
 
 class ProfileRepository {
   final Sql sql;

@@ -84,7 +84,7 @@ class _TakeProfilePictureState extends State<TakeProfilePicture> {
               file.deleteSync();
             }
             // Készítunk egy képet
-            await cameraManager.cameraController.takePicture(path);
+            await cameraManager.cameraController.takePicture();
 
             // Visszaadjuk a mentett fájlt az előző képernyőnek.
             Navigator.pop(context, file);

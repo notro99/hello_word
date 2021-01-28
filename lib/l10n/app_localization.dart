@@ -26,7 +26,7 @@ class AppLocalizations {
   };
 
   // Az aktuális nyelv alapján adjuk vissza  az azonosítóhoz tartozó
-  // lefordított szöveget.
+// lefordított szöveget.
   String stringById(String id) => _localizedValues[locale.languageCode][id];
 
   // Az egyes azonosítókhoz metódust rendelünk

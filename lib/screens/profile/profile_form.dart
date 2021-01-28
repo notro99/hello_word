@@ -38,7 +38,7 @@ class _ProfileFormState extends State<ProfileForm> {
       ..removeCurrentSnackBar()
       ..showSnackBar(
         SnackBar(
-          content: Text(AppLocalizations.of(context).profileSaved),
+          content: Text('mentve'),
         ),
       );
   }
@@ -53,7 +53,7 @@ class _ProfileFormState extends State<ProfileForm> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                AppLocalizations.of(context).profile,
+                'profil',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -68,12 +68,12 @@ class _ProfileFormState extends State<ProfileForm> {
                     TextFormField(
                       controller: _nameController,
                       decoration: InputDecoration(
-                        hintText: AppLocalizations.of(context).enterYourName,
-                        labelText: AppLocalizations.of(context).name,
+                        hintText: 'neved johet',
+                        labelText: 'nev',
                       ),
                       validator: (value) {
                         if (value.isEmpty) {
-                          return AppLocalizations.of(context).mandatoryField;
+                          return 'Kotelezo';
                         }
                         return null;
                       },
@@ -81,12 +81,12 @@ class _ProfileFormState extends State<ProfileForm> {
                     TextFormField(
                       controller: _emailController,
                       decoration: InputDecoration(
-                        hintText: AppLocalizations.of(context).enterYourEmail,
-                        labelText: AppLocalizations.of(context).email,
+                        hintText: 'Email kell',
+                        labelText: 'Email',
                       ),
                       validator: (value) {
                         if (value.isEmpty) {
-                          return AppLocalizations.of(context).mandatoryField;
+                          return 'Kotelezo';
                         }
                         return null;
                       },
@@ -94,12 +94,12 @@ class _ProfileFormState extends State<ProfileForm> {
                     TextFormField(
                       controller: _phoneController,
                       decoration: InputDecoration(
-                        hintText: AppLocalizations.of(context).enterYourPhone,
-                        labelText: AppLocalizations.of(context).phone,
+                        hintText: '+36',
+                        labelText: 'telefonszam',
                       ),
                       validator: (value) {
                         if (value.isEmpty) {
-                          return AppLocalizations.of(context).mandatoryField;
+                          return 'Kotelezo';
                         }
                         return null;
                       },
@@ -119,7 +119,7 @@ class _ProfileFormState extends State<ProfileForm> {
                             saveProfile(context);
                           }
                         },
-                        child: Text(AppLocalizations.of(context).save),
+                        child: Text('Mentes'),
                       ),
                     )
                   ],
@@ -129,7 +129,7 @@ class _ProfileFormState extends State<ProfileForm> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                AppLocalizations.of(context).addresses,
+                'Cim',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,

@@ -7,6 +7,14 @@ class Profile {
   String email;
   List<Address> addresses = [];
 
+  Profile({
+    this.id = 1,
+    this.name = '',
+    this.phone = '',
+    this.email = '',
+    this.addresses,
+  });
+
   void addAddress(Address address) {
     addresses.add(address);
   }

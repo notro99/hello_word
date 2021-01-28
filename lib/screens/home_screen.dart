@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hello_word_android_studio/models/destination_model.dart';
+import 'package:hello_word_android_studio/screens/profile/page2_screen.dart';
+
 import 'package:hello_word_android_studio/screens/profile_screen.dart';
 import 'package:hello_word_android_studio/screens/profile_page.dart';
 import 'package:hello_word_android_studio/widgets/destination_carousel.dart';
 import 'package:hello_word_android_studio/widgets/hotel_carousel.dart';
 
 class HomeScreen extends StatefulWidget {
+  final void Function() onShowProfile;
+
+  const HomeScreen({Key key, this.onShowProfile}) : super(key: key);
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -111,16 +115,13 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           BottomNavigationBarItem(
             icon: IconButton(
-              icon: Icon(Icons.portrait),
-              iconSize: 30.0,
-              color: Colors.black,
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ProfilePage(
-                            profile: profile,
-                          ))),
-            ),
+                icon: Icon(Icons.portrait),
+                iconSize: 30.0,
+                color: Colors.black,
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Page2()));
+                }),
             title: SizedBox.shrink(),
           )
         ],
